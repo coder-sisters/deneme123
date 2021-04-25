@@ -7,16 +7,20 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HomeController {
 
-	@GetMapping({ "/", "/home" })
+	@GetMapping({ "/", "/index" })
 	public String hello(@RequestParam(value = "name", defaultValue = "World", required = true) String name,
 			Model model) {
+		name = name == null || name.trim().equals("") ? "Thymeleaf" : name;
 		model.addAttribute("name" ,  name);
-		return "hello";
+		return "index";
 	}
 	
-	@GetMapping({ "/about"})
-	public String about(Model model) {
-		return "about";
+	@GetMapping({ "/single" })
+	public String single(@RequestParam(value = "name", defaultValue = "World", required = true) String name,
+			Model model) {
+		name = name == null || name.trim().equals("") ? "Thymeleaf" : name;
+		model.addAttribute("name" ,  name);
+		return "single";
 	}
-
+	
 }
