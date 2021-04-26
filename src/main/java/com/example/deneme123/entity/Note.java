@@ -14,7 +14,7 @@ public class Note {
 	private int user_id;
 	private String title;
 
-	@Column(length = 99999999)
+	@Column(length = 999999)
 	private String content;
 	
 	private Date create_date = new Date();

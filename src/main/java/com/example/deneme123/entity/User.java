@@ -12,8 +12,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 
-	@Column(nullable = false) // nullable : boş geçilip geçilmeyeceğini belirler. boş bırakılmaması için false
-								// diyoruz.
+	@Column(nullable = false) // nullable : boş geçilip geçilmeyeceğini belirler. boş bırakılmaması için false diyoruz.
 	private String username;
 
 	private String name;
